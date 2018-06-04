@@ -8,13 +8,12 @@ class OwnRestrictingNodeTransformer(RestrictingNodeTransformer):
 
 source_code = "import this"
 
-context = {}
 try:
     byte_code = compile_restricted(
         source=source_code,
         filename='<inline>',
         mode='exec',
         policy=OwnRestrictingNodeTransformer)
-    exec(byte_code, None, context)
+    exec(byte_code)
 except SyntaxError as e:
     raise e
