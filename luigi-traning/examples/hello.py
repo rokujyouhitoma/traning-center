@@ -18,6 +18,3 @@ class SecondWorldTask(luigi.Task):
 
     def output(self):
         return luigi.LocalTarget('second_world.txt')
-
-if __name__ == '__main__':
-    luigi.run(['examples.HelloWorldTask', '--workers', '1', '--local-scheduler'])
