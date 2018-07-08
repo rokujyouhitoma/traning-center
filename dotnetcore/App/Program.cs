@@ -1,4 +1,6 @@
 ﻿using System;
+using static System.Console;
+using Library;
 
 namespace App
 {
@@ -7,6 +9,7 @@ namespace App
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            WriteLine($"The answer is {new Thing().Get(19, 23)}");
         }
     }
 }
