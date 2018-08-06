@@ -9,16 +9,16 @@ libraries = []
 
 DEBUG = True
 if DEBUG:
-    CFLAGS=["-Wall", "-std=c99", "-D_GNU_SOURCE", "-D_FILE_OFFSET_BITS=64", "-O3", "-g"]
+    CFLAGS=['-Wall', '-std=c99', '-D_GNU_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O3', '-g']
 else:
-    CFLAGS=["-Wall", "-std=c99", "-D_GNU_SOURCE", "-D_FILE_OFFSET_BITS=64", "-O3", "-g"]
+    CFLAGS=['-Wall', '-std=c99', '-D_GNU_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O3', '-g']
 
-ext = Extension("cython_template",
-                sources=["cython_template.pyx"] + sources,
+ext = Extension('main',
+                sources=['main.py'] + sources,
                 include_dirs=include_dirs,
                 libraries=libraries,
-                language="c",
+                language='c',
                 extra_compile_args=CFLAGS)
 
-setup(name="template for cython",
+setup(name='main',
       ext_modules=cythonize([ext]))

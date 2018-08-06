@@ -1,6 +1,5 @@
-# for cywiser
-sqlite3.c
-sqlite3.so
+*.c
+*.so
 
 # cython
 build/
