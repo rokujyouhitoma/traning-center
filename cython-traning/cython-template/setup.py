@@ -7,13 +7,9 @@ include_dirs = []
 
 libraries = []
 
-DEBUG = True
-if DEBUG:
-    CFLAGS=['-Wall', '-std=c99', '-D_GNU_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O3', '-g']
-else:
-    CFLAGS=['-Wall', '-std=c99', '-D_GNU_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O3', '-g']
+CFLAGS = ['-Wall', '-std=c99', '-D_GNU_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O3', '-g']
 
-ext = Extension('main',
+ext = Extension('lib',
                 sources=['main.py'] + sources,
                 include_dirs=include_dirs,
                 libraries=libraries,

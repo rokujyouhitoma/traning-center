@@ -1,7 +1,7 @@
 CC = gcc
 
 cytnon-template:
-	python setup.py build_ext -if
+	python setup.py build_ext --force --inplace
 
 .PHONY: clean
 clean:
